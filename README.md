@@ -1,6 +1,16 @@
 # AF2BIND: Prediction of ligand-binding sites using AlphaFold2
 Predicting ligand-binding sites, particularly in the absence of previously resolved homologous structures, presents a significant challenge in structural biology. Here, we leverage the internal pairwise representation of AlphaFold2 (AF2) to train a model, AF2BIND, to accurately predict small-molecule-binding residues given only a target protein. AF2BIND uses 20 "bait" amino acids to optimally extract the binding signal in the absence of a small-molecule ligand. We find that the AF2 pair representation outperforms other neural-network representations for binding-site prediction. Moreover, unique combinations of the 20 bait amino acids are correlated with chemical properties of the ligand.
 
+## Setup for Running Scripts (Optional):
+To run the scripts `run.py` and `bias.py` you will need to setup a mamba environment and install the following packages: 
+
+```bash
+mamba install numpy pandas py3Dmol jax seaborn
+pip install colabdesign plotly matplotlib 
+```
+
+This will construct biases for [LigandMPNN](https://github.com/dauparas/LigandMPNN).
+
 For more details see preprint:
 
 **AF2BIND: Predicting ligand-binding sites using the pair representation of AlphaFold2**
